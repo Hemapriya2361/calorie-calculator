@@ -1,19 +1,12 @@
-# Byte-compiled / optimized / DLL files
+# Python
 __pycache__/
 *.py[cod]
-*.sqlite3
+
+# SQLite
 db.sqlite3
-
-# Django stuff:
-*.log
-*.pot
-*.pyc
-*.pyo
-*.pyd
-*.db
 *.sqlite3
 
-# VSCode or IDE settings
+# IDEs & environment
 .vscode/
-*.env
-*.idea/
+.env
+*.log
