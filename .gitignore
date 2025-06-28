@@ -1,0 +1,18 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# SQLite database
+*.sqlite3
+db.sqlite3
+
+# Environment
+.env
+*.log
+
+# VS Code
+.vscode/
+
+# Django Migrations
+*/migrations/
+*.pyc
