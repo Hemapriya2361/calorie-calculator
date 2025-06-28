@@ -1,41 +1,19 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
-*$py.class
-
-# C extensions
-*.so
+*.sqlite3
+db.sqlite3
 
 # Django stuff:
 *.log
 *.pot
 *.pyc
 *.pyo
+*.pyd
 *.db
 *.sqlite3
-*.py[cod]
-db.sqlite3
 
-# Static files
-staticfiles/
-media/
-
-# Django migrations (except __init__.py)
-*/migrations/*
-!*/migrations/__init__.py
-
-# Local envs
-.env
-venv/
-env/
-ENV/
-.venv/
-.idea/
+# VSCode or IDE settings
 .vscode/
-
-# macOS
-.DS_Store
-
-# Windows
-Thumbs.db
-ehthumbs.db
+*.env
+*.idea/
