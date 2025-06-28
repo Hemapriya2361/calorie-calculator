@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #e0f7fa, #e8f5e9);
+  min-height: 100vh;
+  padding: 40px 15px;
+  color: #333;
+}
+
+/* Main container */
+.container {
+  max-width: 960px;
+  margin: auto;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 35px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+h1::before {
+  content: '🏃‍♀️ ';
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+input[type="date"],
+input[type="number"],
+input[type="text"],
+select {
+  padding: 12px 14px;
+  font-size: 15px;
+  width: 200px;
+  border: 1px solid #ccd1d1;
+  border-radius: 12px;
+  background-color: #f4f7fa;
+  transition: all 0.2s ease-in-out;
+}
+
+input:focus,
+select:focus {
+  border-color: #2196F3;
+  box-shadow: 0 0 4px rgba(33, 150, 243, 0.4);
+  outline: none;
+}
+
+button {
+  padding: 12px 22px;
+  background-color: #2196F3;
+  color: white;
+  font-size: 15px;
+  border: none;
+  border-radius: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #1565C0;
+}
+
+form[action$="export/"] button {
+  background-color: #455A64;
+}
+form[action$="export/"] button:hover {
+  background-color: #263238;
+}
+
+/* Totals */
+.total {
+  text-align: center;
+  font-size: 18px;
+  margin: 30px 0 15px;
+  line-height: 1.8;
+}
+.total p {
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.total img {
+  width: 26px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.total span.intake {
+  color: #1565C0;
+  font-weight: 600;
+}
+.total span.burn {
+  color: #C62828;
+  font-weight: 600;
+}
+.total span.net {
+  color: #555;
+  font-weight: 600;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  margin-top: 25px;
+  border-collapse: collapse;
+  background: #fdfefe;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+th {
+  background-color: #1976D2;
+  color: white;
+  padding: 14px;
+  text-align: left;
+}
+
+tr:nth-child(even) {
+  background-color: #f1f8ff;
+}
+tr:hover {
+  background-color: #e3f2fd;
+}
+
+td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #eee;
+}
+
+td:last-child {
+  text-align: right;
+}
+
+/* Action links */
+a {
+  color: #1e88e5;
+  margin: 0 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+a:hover {
+  color: #0d47a1;
+}

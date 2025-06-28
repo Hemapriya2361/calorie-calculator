@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fitness Tracker</title>
+    <link rel="stylesheet" href="/static/tracker/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Personal Fitness & Calorie Tracker</h2>
+        <form method="post" action="/add/">
+            {% csrf_token %}
+            <input type="date" name="date" required>
+            <select name="type" required>
+                <option value="Intake">Intake</option>
+                <option value="Burn">Burn</option>
+            </select>
+            <input type="text" name="description" placeholder="Description" required>
+            <input type="number" name="calories" placeholder="Calories (kcal)" required>
+            <button type="submit">Add Entry</button>
+        </form>
+        <div class="total">
+        <p><strong>Total Intake:</strong> {{ intake }} kcal</p>
+        <p><strong>Total Burn:</strong> {{ burn }} kcal</p>
+        <p><strong>Net Calories:</strong> {{ net }} kcal</p>
+        </div>
+        <form action="{% url 'export_csv' %}" method="get" style="margin-top: 15px;">
+        <button type="submit">Download CSV</button>
+        </form>
+        <table>
+            <thead>
+                <tr>
+                <th>Date</th>
+                <th>Type</th>
+                <th>Description</th>
+                <th>Calories</th>
+                <th>Actions</th> <!-- New column -->
+                </tr>
+            </thead>
+            <tbody>
+                {% for e in entries %}
+                <tr>
+                <td>{{ e.date }}</td>
+                <td>{{ e.type }}</td>
+                <td>{{ e.description }}</td>
+                <td>{{ e.calories }}</td>
+                <td>
+                    <a href="{% url 'edit_entry' e.id %}">Edit</a> |
+                    <a href="{% url 'delete_entry' e.id %}">Delete</a>
+                </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
